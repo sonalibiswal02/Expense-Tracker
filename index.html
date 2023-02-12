@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script src="./script.js"></script>
+    <div class="main-container">
+      <div class="display">
+        <h1>Expense Tracker</h1>
+        <span> Balance amount </span>
+        <br />
+
+        <span id="bal-amt"> $ 0.00 </span>
+        <br />
+        <div class="inc-exp-container">
+          <div class="income-display">
+            <h2>Income</h2>
+            <span id="income-number"> $ 0</span>
+          </div>
+
+          <div class="expense-display">
+            <h2>Expense</h2>
+            <span id="expense-number"> $ 0</span>
+          </div>
+        </div>
+      </div>
+      <div class="history">
+        <h2>History</h2>
+        <ul id="his"></ul>
+      </div>
+
+      <div class="new-trans">
+        <h2>Add new transaction</h2>
+        <form onsubmit="onSub(event)">
+          <label for="text" id="ooo"> Description </label>
+          <input
+            type="text"
+            placeholder="what is this amount for?"
+            id="desc"
+            class="desc1"
+          />
+
+          <label for="number"> Amount </label>
+          <input
+            type="number"
+            step="0.01"
+            placeholder="Enter amount"
+            id="amt"
+          />
+
+          <div class="radio-buttons">
+            <input
+              value="income"
+              type="radio"
+              name="rad"
+              id="inc-radio"
+              checked
+            />
+            <label for="inc-radio"> Income</label>
+
+            <input value="expense" type="radio" name="rad" id="exp-radio" />
+
+            <label for="exp-radio"> Expense </label>
+          </div>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
